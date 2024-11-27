@@ -1,0 +1,35 @@
+.product-category-group {
+  border-bottom: 1px solid $border;
+
+  .product-category-list {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .product-category-item {
+    position: relative;
+    flex: 1 1 33.3%;
+    text-align: center;
+
+    button {
+      width: 134px;
+      height: 40px;
+      color: $text-gray-01;
+      border-radius: 40px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        width: 1px;
+        height: 50%;
+        background-color: $border;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

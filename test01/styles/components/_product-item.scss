@@ -1,0 +1,101 @@
+.product-item {
+  height: 100px;
+
+  .product-link {
+    display: flex;
+    gap: 16px;
+  }
+
+  .product-image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid $border;
+    border-radius: 8px;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+        transition: transform 0.2s;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .product-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .product-title-group {
+    height: 38px;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+
+  .product-price-group {
+    margin-top: 6px;
+  }
+
+  .product-brand,
+  .product-title {
+    font-size: 14px;
+    color: $text2;
+  }
+
+  .product-brand {
+    color: $text-blue;
+  }
+
+  .price-number {
+    font-family: 'Gmarket Sans';
+    font-size: 17px;
+    font-weight: 700;
+    color: $text1;
+  }
+
+  .product-discount-price-group {
+    .top {
+      display: flex;
+      margin-top: 4px;
+      gap: 2px;
+
+      .text {
+        font-family: 'Gmarket Sans';
+        font-size: 12px;
+        font-weight: 400;
+        color: $text-red;
+      }
+
+      .original-price {
+        font-family: 'Gmarket Sans';
+        font-size: 12px;
+        font-weight: 400;
+        color: $text-gray-03;
+
+        .price-number {
+          font: inherit;
+          color: inherit;
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      color: $text-red;
+      gap: 4px;
+
+      .price-number {
+        color: inherit;
+      }
+    }
+  }
+}

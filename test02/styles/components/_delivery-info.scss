@@ -1,0 +1,29 @@
+.delivery-info {
+  position: relative;
+
+  .expected-date-group {
+    padding: 0 4px;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .info-button {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: $gray-03;
+    border-radius: 50%;
+
+    &::after {
+      content: 'i';
+    }
+  }
+}

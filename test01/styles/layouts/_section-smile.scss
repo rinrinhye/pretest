@@ -1,0 +1,37 @@
+.section-smile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .section-wrapper {
+    display: flex;
+    max-width: 1280px;
+    gap: 52px;
+  }
+
+  .box {
+    width: 50%;
+  }
+
+  .box-smile-fresh {
+    .product-category-item.on {
+      button {
+        font-weight: 700;
+        color: $white;
+        background: $brand-green;
+      }
+    }
+  }
+
+  .box-smile-delivery {
+    .product-category-item.on {
+      button {
+        font-weight: 700;
+        color: $white;
+        background: $brand-blue;
+      }
+    }
+  }
+}

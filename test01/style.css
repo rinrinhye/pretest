@@ -1,0 +1,367 @@
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("assets/fonts/GmarketSansTTFBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("assets/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("assets/fonts/GmarketSansTTFLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+.bold {
+  font-weight: 700;
+}
+
+.badge--blue, .badge--green {
+  display: inline-block;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.badge--green {
+  background: #00c400;
+}
+
+.badge--blue {
+  background: #2d8ce6;
+}
+
+.arrow-green {
+  padding-right: 22px;
+}
+.arrow-green::after {
+  position: absolute;
+  top: 51%;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("assets/images/sprite.svg");
+  background-repeat: no-repeat;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.arrow-green {
+  position: relative;
+}
+.arrow-green::after {
+  background-position: 0 -44px;
+}
+
+.section-smile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.section-smile .section-wrapper {
+  display: flex;
+  max-width: 1280px;
+  gap: 52px;
+}
+.section-smile .box {
+  width: 50%;
+}
+.section-smile .box-smile-fresh .product-category-item.on button {
+  font-weight: 700;
+  color: #fff;
+  background: #00c400;
+}
+.section-smile .box-smile-delivery .product-category-item.on button {
+  font-weight: 700;
+  color: #fff;
+  background: #2d8ce6;
+}
+
+.section-title-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-title-group .section-title {
+  font-family: "Gmarket Sans";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+.section-title-group .section-link {
+  position: relative;
+  color: #777;
+}
+
+.product-group {
+  padding: 20px 0;
+}
+.product-group .product-list {
+  display: none;
+}
+.product-group .product-list.on {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  row-gap: 20px;
+}
+
+.product-item {
+  height: 100px;
+}
+.product-item .product-link {
+  display: flex;
+  gap: 16px;
+}
+.product-item .product-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.product-item .product-image:hover img {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+.product-item .product-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-item .product-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.product-item .product-title-group {
+  height: 38px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+.product-item .product-price-group {
+  margin-top: 6px;
+}
+.product-item .product-brand,
+.product-item .product-title {
+  font-size: 14px;
+  color: #444;
+}
+.product-item .product-brand {
+  color: #5e8bb4;
+}
+.product-item .price-number {
+  font-family: "Gmarket Sans";
+  font-size: 17px;
+  font-weight: 700;
+  color: #424242;
+}
+.product-item .product-discount-price-group .top {
+  display: flex;
+  margin-top: 4px;
+  gap: 2px;
+}
+.product-item .product-discount-price-group .top .text {
+  font-family: "Gmarket Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: #da120d;
+}
+.product-item .product-discount-price-group .top .original-price {
+  font-family: "Gmarket Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: #9e9e9e;
+}
+.product-item .product-discount-price-group .top .original-price .price-number {
+  font: inherit;
+  color: inherit;
+  text-decoration: line-through;
+}
+.product-item .product-discount-price-group .bottom {
+  display: flex;
+  color: #da120d;
+  gap: 4px;
+}
+.product-item .product-discount-price-group .bottom .price-number {
+  color: inherit;
+}
+
+.product-category-group {
+  border-bottom: 1px solid #ddd;
+}
+.product-category-group .product-category-list {
+  display: flex;
+  margin-bottom: 15px;
+}
+.product-category-group .product-category-item {
+  position: relative;
+  flex: 1 1 33.3%;
+  text-align: center;
+}
+.product-category-group .product-category-item button {
+  width: 134px;
+  height: 40px;
+  color: #666;
+  border-radius: 40px;
+}
+.product-category-group .product-category-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 50%;
+  background-color: #ddd;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.section-more-link {
+  display: block;
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.swiper.smile-fresh-slide .swiper-slide {
+  background: linear-gradient(to right, #2d8ce6, #00c400);
+}
+.swiper.smile-delivery-slide .swiper-slide {
+  background: #2d8ce6;
+}
+.swiper .button-next,
+.swiper .button-prev {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 66px;
+  height: 100%;
+  cursor: pointer;
+}
+.swiper .button-next::after,
+.swiper .button-prev::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23px;
+  height: 44px;
+  background-image: url("assets/images/sprite.svg");
+  content: "";
+  transform: translate(-50%, -50%);
+}
+.swiper .button-prev {
+  left: 0;
+}
+.swiper .button-prev::after {
+  background-position: -88px 0;
+}
+.swiper .button-next {
+  right: 0;
+}
+.swiper .button-next::after {
+  background-position: -115px 0;
+}
+.swiper .swiper-slide {
+  height: 222px;
+}
+.swiper .slide-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 40px;
+}
+.swiper .banner-info .kind,
+.swiper .banner-info .text,
+.swiper .banner-info .sub-text {
+  color: #fff;
+}
+.swiper .banner-info .kind,
+.swiper .banner-info .text {
+  font-family: "Gmarket Sans";
+  font-weight: 400;
+}
+.swiper .banner-info .kind {
+  position: relative;
+  padding-left: 24px;
+}
+.swiper .banner-info .kind::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 20px;
+  background: url("assets/images/sprite.svg");
+  background-position: 0 -44px;
+  content: "";
+  transform: translateY(-50%);
+}
+.swiper .banner-info .text {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.swiper .banner-image {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.swiper .banner-image img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

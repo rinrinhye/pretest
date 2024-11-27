@@ -1,0 +1,17 @@
+.section-title-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .section-title {
+    font-family: 'Gmarket Sans';
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .section-link {
+    position: relative;
+    color: $text-gray-02;
+  }
+}

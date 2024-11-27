@@ -1,0 +1,50 @@
+.delivery-popup {
+  position: absolute;
+  top: 26px;
+  display: none;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+  background: white;
+
+  &.on {
+    display: block;
+  }
+
+  .title {
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .desc {
+    position: relative;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: keep-all;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      color: $gray-01;
+      content: '·';
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+
+    &::after {
+      content: '×';
+    }
+  }
+}

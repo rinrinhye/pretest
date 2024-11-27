@@ -1,0 +1,24 @@
+%arrow {
+  padding-right: 22px;
+
+  &::after {
+    position: absolute;
+    top: 51%;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url('assets/images/sprite.svg');
+    background-repeat: no-repeat;
+    content: '';
+    transform: translateY(-50%);
+  }
+}
+
+.arrow-green {
+  @extend %arrow;
+  position: relative;
+
+  &::after {
+    background-position: 0 -44px;
+  }
+}

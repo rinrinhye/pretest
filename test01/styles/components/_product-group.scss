@@ -1,0 +1,14 @@
+.product-group {
+  padding: 20px 0;
+
+  .product-list {
+    display: none;
+
+    &.on {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 28px;
+      row-gap: 20px;
+    }
+  }
+}

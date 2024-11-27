@@ -1,0 +1,19 @@
+%badge {
+  display: inline-block;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $white;
+  text-align: center;
+}
+
+.badge--green {
+  @extend %badge;
+  background: $brand-green;
+}
+
+.badge--blue {
+  @extend %badge;
+  background: $brand-blue;
+}
